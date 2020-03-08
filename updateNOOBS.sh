@@ -6,7 +6,6 @@ url="http://downloads.raspberrypi.org/NOOBS/images/"
 #NOOBS_path is the path to the local archive of NOOBS images
 #when dereferenced, it is surrounded by quotes to ensure the spaces aren't misinterpreted
 NOOBS_path="/mnt/Repository of Knowledge/private/pi/"
-printf "$current"
 
 printf "\nFinding latest NOOBS image via Curl:\n\n"
 latestPath=$(curl --max-time 4 --retry 999 --retry-delay 1 "$url" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep NOOBS-20 | tail -n 1)
