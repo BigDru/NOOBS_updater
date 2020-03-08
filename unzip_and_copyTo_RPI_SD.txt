@@ -1,0 +1,4 @@
+fdisk format to type c (Win95 LBA)
+mkfs.vfat /dev/sdX1
+mount /dev/sdX1 /mnt/sdcard
+unzip FILE.zip -d /mnt/sdcard
